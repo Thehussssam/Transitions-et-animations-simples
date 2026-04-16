@@ -24,5 +24,5 @@ This is a simple web project for booking events.
 
 ## 👤 Author
 
-- Name: Your Name
+- Name: Houssam El Mouden
 - Student Full Stack Developer
