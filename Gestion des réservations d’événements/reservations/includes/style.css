@@ -1,0 +1,247 @@
+/* === Variables === */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --danger: #dc2626;
+    --success: #16a34a;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-400: #9ca3af;
+    --gray-700: #374151;
+    --gray-900: #111827;
+    --white: #ffffff;
+    --radius: 10px;
+    --shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--gray-100);
+    color: var(--gray-900);
+    min-height: 100vh;
+}
+
+/* === Navbar === */
+nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+nav .nav-links a {
+    color: var(--gray-700);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.95rem;
+}
+
+nav .nav-links a:hover {
+    color: var(--primary);
+}
+
+/* === Container === */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+    color: var(--gray-900);
+}
+
+/* === Event Cards === */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    color: var(--gray-900);
+}
+
+.card .meta {
+    font-size: 0.88rem;
+    color: var(--gray-400);
+}
+
+.card .price {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.card .places {
+    font-size: 0.85rem;
+    color: var(--gray-700);
+}
+
+.badge-sold {
+    background: var(--danger);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    width: fit-content;
+}
+
+/* === Buttons === */
+.btn {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    transition: opacity 0.15s;
+}
+
+.btn:hover { opacity: 0.85; }
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-danger  { background: var(--danger); color: white; }
+.btn-success { background: var(--success); color: white; }
+.btn-outline {
+    background: transparent;
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn:disabled {
+    background: var(--gray-200);
+    color: var(--gray-400);
+    cursor: not-allowed;
+}
+
+/* === Forms === */
+.form-box {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 32px;
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.form-box h1 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--gray-700);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 7px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.15s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+}
+
+/* === Alerts === */
+.alert {
+    padding: 10px 16px;
+    border-radius: 7px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+.alert-error   { background: #fee2e2; color: var(--danger); }
+.alert-success { background: #dcfce7; color: var(--success); }
+
+/* === Table === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+th {
+    background: var(--gray-100);
+    font-weight: 700;
+    color: var(--gray-700);
+}
+
+tr:last-child td { border-bottom: none; }
+
+/* === Admin search bar === */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 9px 14px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 7px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.search-bar input:focus { border-color: var(--primary); }
+
+/* === Misc === */
+.text-center { text-align: center; }
+.mt-12 { margin-top: 12px; }
+.mt-20 { margin-top: 20px; }
